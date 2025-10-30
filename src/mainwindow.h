@@ -1,5 +1,7 @@
 #pragma once
 #include <QMainWindow>
+#include <QVector>
+#include <QPointF>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -19,4 +21,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    QVector<QPointF> m_data;   // dane pomiarowe
+    QVector<QPointF> loadCSV(const QString &filePath);  // funkcja pomocnicza
 };
