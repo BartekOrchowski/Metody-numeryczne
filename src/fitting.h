@@ -1,9 +1,10 @@
 #pragma once
-#include <QVector>
-#include <QPointF>
+#include <string>
 
-class Fitting
-{
-public:
-    static QPair<double, double> fitShockley(const QVector<QPointF> &data);
+struct FittingResult {
+    double Is;
+    double n;
+    bool success;
 };
+
+FittingResult fitShockleyModel(const std::string& csvPath);
