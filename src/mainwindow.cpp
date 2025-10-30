@@ -9,6 +9,10 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    // Ensure chartView has a valid QChart instance
+    if (ui->chartView && !ui->chartView->chart()) {
+        ui->chartView->setChart(new QChart());
+    }
     connect(ui->loadButton, &QPushButton::clicked, this, &MainWindow::onLoadCSV);
     connect(ui->fitButton, &QPushButton::clicked, this, &MainWindow::onFitModel);
 }
