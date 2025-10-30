@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vscode-cmake-tools/main/schemas/launch.v5.schema.json",
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CMake: Debug (executable)",
+      "type": "cmake",
+      "request": "launch",
+      "cmakeDebugType": "executable",
+      "program": "${command:cmake.launchTargetPath}",
+      "cwd": "${workspaceFolder}",
+      "args": [],
+      "stopAtEntry": false
+    }
+  ]
+}
