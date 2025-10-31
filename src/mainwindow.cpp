@@ -4,6 +4,8 @@
 #include <QFileDialog>
 #include <QTextStream>
 #include <QMessageBox>
+#include <QtCharts/QLineSeries>  // dodaj
+// używaj: QLineSeries bez kwalifikacji
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow)
