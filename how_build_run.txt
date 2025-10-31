@@ -1,0 +1,25 @@
+PowerShell quick build and run for Qt 6.9.3 (MinGW)
+
+# 0) Open PowerShell in the project folder
+#    C:\Users\huenk\Downloads\met_numeryczne
+
+# 1) Clean previous CMake/cache/build outputs (safe if they don't exist)
+Remove-Item -Recurse -Force build, CMakeCache.txt, CMakeFiles -ErrorAction SilentlyContinue
+
+# 2) Ensure Qt and MinGW tools are on PATH for this session
+$env:Path = "C:\Qt\6.9.3\mingw_64\bin;C:\Qt\Tools\mingw1310_64\bin;$env:Path"
+
+# 3) Configure and generate with MinGW Makefiles (Qt 6.9.3 mingw_64)
+cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:/Qt/6.9.3/mingw_64/lib/cmake"
+
+# 4) Build
+cmake --build build -j
+
+# 5) Run the app
+cd build
+./met_numeryczne.exe
+
+# Tip: If you move the EXE outside of the build folder,
+#      run windeployqt to copy required Qt DLLs next to it:
+#      windeployqt.exe .\met_numeryczne.exe
+

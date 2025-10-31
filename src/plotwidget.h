@@ -1,12 +1,10 @@
 #pragma once
-#include <QWidget>
 #include <QtCharts/QChartView>
 #include <QtCharts/QLineSeries>
+#include <QVector>
+#include <QPointF>
 
-QT_CHARTS_USE_NAMESPACE
-
-class PlotWidget : public QChartView
-{
+class PlotWidget : public QChartView {   // bez QtCharts::
     Q_OBJECT
 public:
     explicit PlotWidget(QWidget *parent = nullptr);

@@ -1,0 +1,31 @@
+## Build and CMake outputs
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+/.cmake/
+
+## Local outputs
+/out/
+/Debug/
+/Release/
+/bin/
+/lib/
+
+## IDE folders
+/.vs/
+/.qtcreator/
+
+## VS Code incidental caches (keep .vscode settings in repo)
+.vscode/ipch/
+
+## Qt/Qt Creator user files
+*.pro.user
+*.pro.user.*
+*.user
+*.qmlc
+*.jsc
+
+# Avoid Windows reserved device-name artifact breaking git add on Windows
+NUL

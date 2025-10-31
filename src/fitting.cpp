@@ -3,7 +3,8 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
-
+#include <vector>
+#include <string>
 struct DataPoint {
     double V;
     double I;
