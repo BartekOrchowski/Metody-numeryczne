@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "$schema": "https://raw.githubusercontent.com/microsoft/vscode-cmake-tools/main/schemas/launch.v5.schema.json",
     "version": "0.2.0",
     "configurations": [
@@ -38,3 +39,35 @@
       }
     ]
 }
+=======
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug MinGW (CMake)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "cwd": "${workspaceFolder}/build",
+      "args": [],
+      "environment": [
+        { "name": "PATH", "value": "C:/Qt/6.9.3/mingw_64/bin;C:/Qt/Tools/mingw1310_64/bin;${env:PATH}" },
+        { "name": "QT_PLUGIN_PATH", "value": "C:/Qt/6.9.3/mingw_64/plugins" }
+      ],
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Qt/Tools/mingw1310_64/bin/gdb.exe",
+      "externalConsole": false,
+      "stopAtEntry": false
+    },
+    {
+      "name": "Debug MSVC (CMake)",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${command:cmake.launchTargetPath}",
+      "cwd": "${workspaceFolder}/build",
+      "args": [],
+      "externalConsole": false,
+      "stopAtEntry": false
+    }
+  ]
+}
+>>>>>>> 98c6e1fe1b48bbb3fdf4db59533b6decec358ad9
