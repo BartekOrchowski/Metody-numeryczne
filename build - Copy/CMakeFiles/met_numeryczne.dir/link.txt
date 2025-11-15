@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\met_numeryczne.dir/objects.a
+C:\Qt\Tools\mingw1310_64\bin\ar.exe qc CMakeFiles\met_numeryczne.dir/objects.a @CMakeFiles\met_numeryczne.dir\objects1.rsp
+C:\Qt\Tools\mingw1310_64\bin\c++.exe -mwindows -Wl,--whole-archive CMakeFiles\met_numeryczne.dir/objects.a -Wl,--no-whole-archive -o met_numeryczne.exe -Wl,--out-implib,libmet_numeryczne.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\met_numeryczne.dir\linkLibs.rsp

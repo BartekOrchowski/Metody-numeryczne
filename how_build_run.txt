@@ -16,6 +16,7 @@ cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:/Qt/6.9.3/mingw_
 cmake --build build -j
 
 # 5) Run the app
+
 cd build
 ./met_numeryczne.exe
 
