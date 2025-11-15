@@ -1,3 +1,32 @@
-uhvjc
 
-asfasfaf
+
+PS C:\Users\huenk\Downloads\met_numeryczne> cmake --build build -j
+>>
+[  0%] Built target met_numeryczne_autogen_timestamp_deps
+[ 14%] Automatic MOC and UIC for target met_numeryczne
+[ 14%] Built target met_numeryczne_autogen
+[ 28%] Building CXX object CMakeFiles/met_numeryczne.dir/met_numeryczne_autogen/mocs_compilation.cpp.obj
+[ 42%] Building CXX object CMakeFiles/met_numeryczne.dir/src/main.cpp.obj
+[ 57%] Building CXX object CMakeFiles/met_numeryczne.dir/src/mainwindow.cpp.obj
+[ 71%] Building CXX object CMakeFiles/met_numeryczne.dir/src/fitting.cpp.obj
+[ 85%] Building CXX object CMakeFiles/met_numeryczne.dir/src/plotwidget.cpp.obj
+C:\Users\huenk\Downloads\met_numeryczne\src\mainwindow.cpp: In member function 'void MainWindow::updateChart()':
+C:\Users\huenk\Downloads\met_numeryczne\src\mainwindow.cpp:187:62: warning: 'QAbstractAxis* QChart::axisX(QAbstractSeries*) const' is deprecated [-Wdeprecated-declarations]
+  187 |     if (auto *axisX = qobject_cast<QValueAxis *>(chart->axisX())) {
+      |                                                  ~~~~~~~~~~~~^~
+In file included from C:/Qt/6.9.3/mingw_64/include/QtCharts/QChart:1, 
+                 from C:/Qt/6.9.3/mingw_64/include/QtCharts/qchartview.h:9,
+                 from C:/Qt/6.9.3/mingw_64/include/QtCharts/QChartView:1,
+                 from C:/Users/huenk/Downloads/met_numeryczne/build/met_numeryczne_autogen/include/ui_mainwindow.h:12,
+                 from C:\Users\huenk\Downloads\met_numeryczne\src\mainwindow.cpp:2:
+C:/Qt/6.9.3/mingw_64/include/QtCharts/qchart.h:83:38: note: declared here
+   83 |     Q_DECL_DEPRECATED QAbstractAxis *axisX(QAbstractSeries *series = nullptr) const;
+      |                                      ^~~~~
+C:\Users\huenk\Downloads\met_numeryczne\src\mainwindow.cpp:195:62: warning: 'QAbstractAxis* QChart::axisY(QAbstractSeries*) const' is deprecated [-Wdeprecated-declarations]
+  195 |     if (auto *axisY = qobject_cast<QValueAxis *>(chart->axisY())) {
+      |                                                  ~~~~~~~~~~~~^~
+C:/Qt/6.9.3/mingw_64/include/QtCharts/qchart.h:84:38: note: declared here
+   84 |     Q_DECL_DEPRECATED QAbstractAxis *axisY(QAbstractSeries *series = nullptr) const;
+      |                                      ^~~~~
+[100%] Linking CXX executable met_numeryczne.exe
+[100%] Built target met_numeryczne
