@@ -20,5 +20,9 @@ private slots:
 private:
     Ui::MainWindow *ui;
     QVector<QPointF> m_data;
+    QVector<QPointF> m_modelData;
+
     QVector<QPointF> loadCSV(const QString &filePath);
+    QVector<QPointF> generateShockleyCurve() const;
+    void updateChart();
 };

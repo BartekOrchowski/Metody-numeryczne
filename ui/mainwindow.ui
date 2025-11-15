@@ -14,7 +14,7 @@
    <string>Shockley Model</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+   <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,1">
     <item>
      <layout class="QHBoxLayout" name="topButtonsLayout">
       <item>
@@ -45,6 +45,194 @@
        </spacer>
       </item>
      </layout>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="parametersGroup">
+      <property name="title">
+       <string>Parametry modelu</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="labelSaturation">
+         <property name="text">
+          <string>Prąd nasycenia (A)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="saturationCurrentSpin">
+         <property name="decimals">
+          <number>9</number>
+         </property>
+         <property name="minimum">
+          <double>1.000000000000000e-12</double>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000e+00</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e-06</double>
+         </property>
+         <property name="value">
+          <double>2.000000000000000e-06</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="labelIdeality">
+         <property name="text">
+          <string>Współczynnik idealności n</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="idealityFactorSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>5.000000000000000e-01</double>
+         </property>
+         <property name="maximum">
+          <double>2.000000000000000e+00</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e-01</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000e+00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="labelTemperature">
+         <property name="text">
+          <string>Temperatura (K)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="temperatureSpin">
+         <property name="minimum">
+          <double>2.000000000000000e+02</double>
+         </property>
+         <property name="maximum">
+          <double>6.000000000000000e+02</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e+01</double>
+         </property>
+         <property name="value">
+          <double>3.000000000000000e+02</double>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="labelMinVoltage">
+         <property name="text">
+          <string>Minimalne napięcie (V)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QDoubleSpinBox" name="minVoltageSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>-1.000000000000000e+02</double>
+         </property>
+         <property name="maximum">
+          <double>0.000000000000000e+00</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e-01</double>
+         </property>
+         <property name="value">
+          <double>-5.000000000000000e+00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="labelMaxVoltage">
+         <property name="text">
+          <string>Maksymalne napięcie (V)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QDoubleSpinBox" name="maxVoltageSpin">
+         <property name="decimals">
+          <number>2</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000e+00</double>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000e+01</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e-01</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000e+00</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="labelBreakdownVoltage">
+         <property name="text">
+          <string>Napięcie przebicia |V_BR|</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QDoubleSpinBox" name="breakdownVoltageSpin">
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000e+00</double>
+         </property>
+         <property name="maximum">
+          <double>1.000000000000000e+02</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e+00</double>
+         </property>
+         <property name="value">
+          <double>5.000000000000000e+01</double>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="labelBreakdownCurrent">
+         <property name="text">
+          <string>Prąd przebicia (A)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QDoubleSpinBox" name="breakdownCurrentSpin">
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>-1.000000000000000e+01</double>
+         </property>
+         <property name="maximum">
+          <double>0.000000000000000e+00</double>
+         </property>
+         <property name="singleStep">
+          <double>1.000000000000000e-02</double>
+         </property>
+         <property name="value">
+          <double>-1.000000000000000e-02</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
     <item>
      <widget class="QChartView" name="chartView" native="true">
@@ -80,4 +268,3 @@
  <resources/>
  <connections/>
  </ui>
-
