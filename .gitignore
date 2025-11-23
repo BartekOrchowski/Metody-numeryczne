@@ -29,3 +29,4 @@
 
 # Avoid Windows reserved device-name artifact breaking git add on Windows
 NUL
+data/diode_project_modified.zip
