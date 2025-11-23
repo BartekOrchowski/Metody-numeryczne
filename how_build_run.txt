@@ -1,3 +1,5 @@
+Remove-Item -Recurse -Force build, CMakeCache.txt, CMakeFiles -ErrorAction SilentlyContinue; $env:Path = "C:\Qt\6.9.3\mingw_64\bin;C:\Qt\Tools\mingw1310_64\bin;$env:Path"; cmake -S . -B build -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:/Qt/6.9.3/mingw_64/lib/cmake"; $cores = [Environment]::ProcessorCount; cmake --build build -j $cores; cd build; ./met_numeryczne.exe
+
 PowerShell quick build and run for Qt 6.9.3 (MinGW)
 
 # 0) Open PowerShell in the project folder

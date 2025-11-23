@@ -4,6 +4,9 @@ project(met_numeryczne LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+# Fix for Vulkan SDK path
+set(Vulkan_INCLUDE_DIR "C:/VulkanSDK/1.4.328.1/Include" CACHE PATH "Path to Vulkan headers")
+
 # Gdzie leżą .ui (masz w ./ui)
 set(CMAKE_AUTOUIC_SEARCH_PATHS ${CMAKE_CURRENT_SOURCE_DIR}/ui)
 
@@ -30,7 +33,7 @@ set(HEADERS
 )
 
 # Executable (Qt6)
-qt_add_executable(met_numeryczne
+qt_add_executable(met_numeryczne MANUAL_FINALIZATION
     ${SOURCES}
     ${HEADERS}
 )
